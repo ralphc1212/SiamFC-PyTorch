@@ -35,7 +35,16 @@ def load_sequence(seq_root_path, seq_name):
     img_list.sort()
     img_list = [os.path.join(img_dir, x) for x in img_list]
 
-    gt = np.loadtxt(gt_path, delimiter=',')
+    checks = ['CarScale', 'Subway', 'Vase', 'Walking', 'Board',
+              'FaceOcc1', 'Toy', 'Couple', 'BlurCar4', 'Dog',
+              'Woman', 'BlurCar1', 'ClifBar', 'BlurCar2', 'BlurCar3',
+              'Walking2', 'Box', 'Rubik', 'BlurBody', 'Crossing',
+              'Sylvester', 'Surfer', 'Twinnings', 'Girl', 'BlurOwl',
+              'Car4', 'Singer1', 'BlurFace']
+    if any(check+'/' in gt_path for check in checks):
+        gt = np.loadtxt(gt_path)
+    else:
+        gt = np.loadtxt(gt_path, delimiter=',')
 
     init_bbox = gt[0]
     if seq_name == "Tiger1":

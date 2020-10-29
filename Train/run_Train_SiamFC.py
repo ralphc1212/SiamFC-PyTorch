@@ -170,7 +170,7 @@ def train(data_dir, train_imdb, val_imdb, model_save_path="./model/", use_gpu=Tr
 
 if __name__ == "__main__":
 
-    data_dir = "/home/hfan/Dataset/ILSVRC2015_crops/Data/VID/train"
+    data_dir = ""
     train_imdb = "/home/hfan/Desktop/PyTorch-SiamFC/ILSVRC15-curation/imdb_video_train.json"
     val_imdb = "/home/hfan/Desktop/PyTorch-SiamFC/ILSVRC15-curation/imdb_video_val.json"
 

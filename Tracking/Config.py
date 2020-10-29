@@ -48,7 +48,7 @@ class Config:
         self.score_size = 17
 
         # path to your trained model
-        self.net_base_path = "/home/nandcui/projects/abnn/examples/tracking/pretr/"
+        self.net_base_path = "/home/nandcui/projects/SiamFC-PyTorch/Train/model/"
         # path to your sequences (sequence should be in OTB format)
         self.seq_base_path = "/home/nandcui/data/tracking/tracker/"
         # which model to use

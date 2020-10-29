@@ -142,6 +142,8 @@ if __name__ == "__main__":
     else:                       # evaluation the whole OTB benchmark
         # load all videos
         all_videos = os.listdir(p.seq_base_path)
+        all_videos.remove('.DS_Store')
+        all_videos.remove('__MACOSX')
 
         if p.bbox_output:
             if not os.path.exists(p.bbox_output_path):

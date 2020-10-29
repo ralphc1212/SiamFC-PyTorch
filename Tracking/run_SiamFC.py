@@ -18,7 +18,7 @@ def run_tracker(p):
     run tracker, return bounding result and speed
     """
     # load model
-    net = torch.load(os.path.join(p.net_base_path, p.net))
+    net = torch.load(os.path.join(p.net_base_path, p.net), map_location=device)
     net = net.to(device)
 
     # evaluation mode

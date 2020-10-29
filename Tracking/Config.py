@@ -38,7 +38,7 @@ class Config:
         self.w_influence = 0.176
 
         self.video = "Lemming"
-        self.visualization = 0
+        self.visualization = 1
         self.bbox_output = True
         self.bbox_output_path = "./tracking_result/"
 
